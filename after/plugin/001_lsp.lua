@@ -36,3 +36,18 @@ local cmp_mappings = lsp_zero.defaults.cmp_mappings({
 	["<C-Space>"] = cmp.mapping.complete(),
 })
 
+-- switch between header and source file
+vim.keymap.set("n", "<M-o>", function() 
+    local filename = vim.fn.expand('%:p')
+    local new_filename
+
+    if string.match(filename, '.h$') then
+        new_filename = string.gsub(filename, '.h$', '.cpp')
+    elseif string.match(filename, '.cpp$') then
+        new_filename = string.gsub(filename, '.cpp$', '.h')
+    end
+
+    if new_filename then
+        vim.cmd('e ' .. new_filename)
+    end
+end, opts)

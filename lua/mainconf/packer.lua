@@ -46,6 +46,13 @@ return require('packer').startup(function(use)
 
   use { 'nvim-treesitter/playground' , commit="ba48c6a62a280eefb7c85725b0915e021a1a0749"}
   use { 'ThePrimeagen/harpoon', commit="c1aebbad9e3d13f20bedb8f2ce8b3a94e39e424a" }
+  use { 'ThePrimeagen/refactoring.nvim',
+    commit="bebfcfcc4b604d3647fcce2f4aeb02a95d139c49",
+    requires = {
+        {"nvim-lua/plenary.nvim"},
+        {"nvim-treesitter/nvim-treesitter"}
+    }
+  }
   use { 'mbbill/undotree', commit="0e11ba7325efbbb3f3bebe06213afa3e7ec75131" }
   use { 'kikito/inspect.lua', commit="8686162bce74913c4d3a577e7324642ddc4e21c0"}
   use {
@@ -65,11 +72,22 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip', commit="0df29db3543837f8b41597f2640397c5ec792b7b"},
 		  {'tpope/vim-fugitive', commit="cbe9dfa162c178946afa689dd3f42d4ea8bf89c1"},
           {'tpope/vim-dispatch', commit="6cc2691576f97d43f8751664d1a1a908b99927e5"},
-          -- My plugin, always latest commit
-          {'zadirion/Unreal.nvim'},
 	  }
   }
-  
+
+  use {
+      requires = { "nvim-treesitter/nvim-treesitter" },
+      "Badhi/nvim-treesitter-cpp-tools",
+  }
+
+  -- My plugin, always latest commit
+  use {'zadirion/Unreal.nvim',
+    requires =
+    {
+        {"tpope/vim-dispatch"}
+    }
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
