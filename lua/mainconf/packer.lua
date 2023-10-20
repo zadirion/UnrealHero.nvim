@@ -80,6 +80,9 @@ return require('packer').startup(function(use)
       "Badhi/nvim-treesitter-cpp-tools",
   }
 
+  use {
+      'SirVer/ultisnips'
+  }
   -- My plugin, always latest commit
   use {'zadirion/Unreal.nvim',
     requires =

@@ -7,7 +7,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- makes it so that J keeps the cursor in the same place, when appending next
 -- line to current line
-vim.keymap.set("v", "J", "mzJ`z")
+vim.keymap.set("n", "J", "mzJ`z")
 
 
 -- keep cursor in middle of the screen when C-d and C-u or n N navigating
@@ -34,6 +34,8 @@ vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
 vim.keymap.set("n", "Q", "<nop>")
+
+vim.keymap.set("n", "<RQ", "<nop>")
 
 
 -- quickfix navigation list
