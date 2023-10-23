@@ -47,3 +47,13 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- replace the current word
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- open list of opened buffers
+vim.keymap.set("n", "<C-t>", "<cmd>Telescope buffers<CR>")
+
+-- exit insert mode
+vim.keymap.set("i", "jk", "<esc>l")
+-- undo
+vim.keymap.set("i", "uu", "<cmd>undo<CR>")
+-- delete previous word
+vim.keymap.set("i", "ww", "<C-w>")

@@ -1,0 +1,23 @@
+#  makes it so it inherits c snippets
+# tha are defined here
+extends c
+snippet defun
+${1:rettype} ${3:${4:`!v expand("%:t:r")`}::}${5:FuncName}(${6:const }${7:ArgType}${8|&,*|} ${9:ArgName})
+\{
+	${VISUAL}
+	$0
+\}
+endsnippet
+
+snippet if "if ... then (if)"
+if ${2:[[ ${1:condition} ]]}; thenasdf
+	${0:#statements}
+	${VISUAL:somevisualhere}
+fi
+endsnippet
+
+snippet case
+	case ${1:word} in
+		${2:pattern} ) $0;;
+	esac
+endsnippet

@@ -83,6 +83,12 @@ return require('packer').startup(function(use)
   use {
       'SirVer/ultisnips'
   }
+
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
   -- My plugin, always latest commit
   use {'zadirion/Unreal.nvim',
     requires =

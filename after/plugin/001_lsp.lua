@@ -19,6 +19,7 @@ end)
 -- :vimgrep pattern file - find all in file. Navigate with C-K and C-J
 --                  use % for file to search current file
 --
+-- copies the current buffer's file path to the unnamed register
 vim.api.nvim_create_user_command('Cbp',function()
     vim.fn.setreg('"', vim.fn.expand("%"))
 end,{})
