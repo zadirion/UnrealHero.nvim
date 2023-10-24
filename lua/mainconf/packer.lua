@@ -28,12 +28,6 @@ return require('packer').startup(function(use)
           { 'BurntSushi/ripgrep', commit="7099e174acbcbd940f57e4ab4913fee4040c826e"}
       }
   }
-  use({ 'rose-pine/neovim', as = 'rose-pine',
-  commit = "e29002cbee4854a9c8c4b148d8a52fae3176070f",
-  config = function()
-	  vim.cmd('colorscheme rose-pine')
-  end})
-  use { 'xiyaowong/transparent.nvim', commit="3af6232c8d39d51062702e875ff6407c1eeb0391"}
 
   use {
 	  'nvim-treesitter/nvim-treesitter',
@@ -89,6 +83,7 @@ return require('packer').startup(function(use)
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  use { 'rose-pine/neovim' }
   use { "nonetallt/vim-neon-dark" }
   use { "folke/tokyonight.nvim" }
   use { "tomasr/molokai" }
