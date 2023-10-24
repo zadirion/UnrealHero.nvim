@@ -23,3 +23,7 @@ require("mainconf.packer_getcommit")
 require("mainconf.set")
 require("mainconf.scrollfontsize")
 
+-- neovide specific settings
+vim.g.neovide_fullscreen = true
+vim.g.neovide_transparency = 0.85
+vim.cmd [[colorscheme shades_of_purple]]

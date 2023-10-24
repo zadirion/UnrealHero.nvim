@@ -89,6 +89,15 @@ return require('packer').startup(function(use)
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  use { "nonetallt/vim-neon-dark" }
+  use { "folke/tokyonight.nvim" }
+  use { "tomasr/molokai" }
+  use { "Reewr/vim-monokai-phoenix" }
+  use { "bluz71/vim-nightfly-colors" }
+  use { "Rigellute/shades-of-purple.vim" }
+  use { "hachy/eva01.vim" }
+  use { "senran101604/neotrix.vim" }
+
   -- My plugin, always latest commit
   use {'zadirion/Unreal.nvim',
     requires =
