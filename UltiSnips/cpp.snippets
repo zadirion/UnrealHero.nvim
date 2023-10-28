@@ -1,0 +1,46 @@
+#  makes it so it inherits c snippets
+# tha are defined here
+# :call UltiSnips#RefreshSnippets()
+extends c
+snippet deffun
+${1:rettype} ${3:${4:`!v expand("%:t:r")`}::}${5:FuncName}(${6:const }${7:ArgType}${8|&,*|} ${9:ArgName})
+\{
+	${VISUAL}
+	$0
+\}
+endsnippet
+
+global !p
+def remove_semicolon(snip):
+	import vim
+	clipboard_content = snip.v.text or '' 
+	if clipboard_content.endswith(';'):
+		snip.rv = snip.rv[:-1]
+endglobal
+
+snippet if
+if (${2:`!p
+stripped = snip.v.text.strip()
+if stripped.endswith(';'):
+	snip.rv = stripped[:-1] 
+	`}) 
+{
+	${3:${VISUAL}}
+}
+endsnippet
+
+snippet case
+	case ${1:word} in
+		${2:pattern} ) $0;;
+	esac
+endsnippet
+
+snippet class 
+class $1
+{
+public:
+	${2:$1($3)
+	{
+	}}
+};
+endsnippet
