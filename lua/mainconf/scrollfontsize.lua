@@ -15,7 +15,6 @@ Fontsize = 12
 vim.opt.guifont = "SpaceMono Nerd Font:h" .. Fontsize
 
 function SetFontSize(fontsizeArg)
-    print("called")
     if vim.g.neovide then
         local factor = fontsizeArg/12.0
         vim.g.neovide_scale_factor = factor
