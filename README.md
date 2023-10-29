@@ -4,9 +4,10 @@ Nvim configuration suitable for development in Unreal Engine
 ![image](https://raw.githubusercontent.com/zadirion/UnrealHero.nvim/main/image.png)
 
 *Requirements:*
-Make sure you have in you path:
-- python 3.11 installed 
-- ripgrep
+Make sure you have in your path:
+- make sure you install the clangd support component through Visual Studio Setup, and make sure the installed clang++.exe is in your system path env variable. Needs to be added manually to path, the installer does not do that
+- python 3.11 installed in your path
+- ripgrep in your path
 
 **Setup**
 
