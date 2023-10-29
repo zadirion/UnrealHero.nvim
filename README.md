@@ -1,7 +1,10 @@
 # UnrealHero.nvim
 
 Nvim configuration suitable for development in Unreal Engine
-![image](https://raw.githubusercontent.com/zadirion/UnrealHero.nvim/main/image.png)
+[![Video - how to set up](https://img.youtube.com/vi/dlR_ryaQkRM/0.jpg)](https://github.com/zadirion/UnrealHero.nvim/tree/main
+)
+
+
 
 *Requirements:*
 Make sure you have in your path:
