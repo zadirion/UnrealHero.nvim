@@ -15,6 +15,7 @@ vim.cmd [[colorscheme shades_of_purple]]
 	vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
 	vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#05060c"})
 	vim.api.nvim_set_hl(0, "ColorLine", { bg = "#AAAAAA"})
+	vim.api.nvim_set_hl(0, "MatchParen", { bg = "#472665"})
 
 
 	-- vim.api.nvim_set_hl(0, "CursorLine", { bg = "#AAAAAA", blend=10 })

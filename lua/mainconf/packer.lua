@@ -92,6 +92,11 @@ return require('packer').startup(function(use)
   use { "Rigellute/shades-of-purple.vim" }
   use { "hachy/eva01.vim" }
   use { "senran101604/neotrix.vim" }
+  use { "SrMrBurchick/perforce.nvim", 
+    commit="1d6ac3e13bca98e5d6760a4bcd8ae2f986ff8ff3",
+    run = function()
+		  require('Perforce')
+	  end}
 
   -- My plugin, always latest commit
   use {'zadirion/Unreal.nvim',
