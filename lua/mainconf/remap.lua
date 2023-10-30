@@ -58,3 +58,8 @@ vim.keymap.set("i", "jk", "<esc>l")
 vim.keymap.set("i", "uu", "<cmd>undo<CR>")
 -- delete previous word
 vim.keymap.set("i", "ww", "<C-w>")
+
+
+-- Unreal.nvim mappings
+vim.keymap.set("n", "<C-b>", "<cmd>UnrealBuild<CR>")
+vim.keymap.set("n", "<F5>", "<cmd>UnrealRun<CR>")

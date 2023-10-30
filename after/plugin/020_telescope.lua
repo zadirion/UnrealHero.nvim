@@ -19,7 +19,6 @@ vim.keymap.set('n', '<leader>fs', function (opts)
     "textDocument/documentSymbol", params,
     function(err, result, _, _)
         if err then
-            print("fallback")
             return builtin.treesitter()
         end
         return builtin.lsp_document_symbols()

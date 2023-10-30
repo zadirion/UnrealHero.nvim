@@ -6,7 +6,6 @@ if file then
     dofile(configFilePath)
 end
 vim.api.nvim_create_user_command("UnrealHero", function(opts)
-    print(configFilePath)
     vim.cmd("vs " .. configFilePath) 
 end, {})
 
