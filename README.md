@@ -12,6 +12,7 @@ Youtube video explanation on how to set it up, click the image below:
 Make sure you have in your path:
 - make sure you install the clangd support component through Visual Studio Setup, and make sure the installed clang++.exe is in your system path env variable. Needs to be added manually to path, the installer does not do that
 - python 3.11 installed in your path
+- from cmd line do `pip install neovim` to install the python neovim module. Needed for ultisnips snippets
 - ripgrep in your path
 
 **Setup**
