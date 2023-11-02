@@ -20,6 +20,8 @@ Make sure you have in your path:
 You will have to run `:PackerSync` and restart neovim a few times until everything gets downloaded and looks ok
 Run `:Mason` and check that it finished installing everything, before closing
 
+Finally, run `:checkhealth` and check that everything is ok
+
 Comes with https://github.com/zadirion/Unreal.nvim, my neovim plugin that adds support for Unreal Engine
 
 **Pre-configured Bindings/Shortcuts**
