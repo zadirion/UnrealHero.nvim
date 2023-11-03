@@ -54,6 +54,14 @@ public:
 };
 endsnippet
 
+snippet copyc
+$1(const $1& Other){this->operator=(Other);}
+$1($1&& Other){}
+operator=($1&& Other){}
+~$1(){}
+endsnippet
+
+
 snippet map "std::map (map)"
 std::map<${1:key}, ${2:value}> map$0;
 endsnippet
@@ -75,3 +83,10 @@ snippet tarray
 TArray<${1:char}> v$0;
 endsnippet
 
+snippet [] "lambda" i
+
+	[$2]($3)
+	{
+		${VISUAL}$0
+	}${1:);}
+endsnippet
