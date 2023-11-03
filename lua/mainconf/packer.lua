@@ -61,7 +61,49 @@ return require('packer').startup(function(use)
 		  -- LSP Support
 		  {'neovim/nvim-lspconfig', commit="2a101fb00e6f6eb29c230736b99f05c3b3192b94"},
 		  -- Autocompletion
-		  {'hrsh7th/nvim-cmp', commit="5dce1b778b85c717f6614e3f4da45e9f19f54435"},
+          {
+              'hrsh7th/nvim-cmp', 
+              commit="5dce1b778b85c717f6614e3f4da45e9f19f54435",
+              requires = {
+                  "quangnguyen30192/cmp-nvim-ultisnips",
+                  config = function()
+                      -- optional call to setup (see customization section)
+                      require("cmp_nvim_ultisnips").setup{}
+                  end,
+                  -- If you want to enable filetype detection based on treesitter:
+                  -- requires = { "nvim-treesitter/nvim-treesitter" },
+              },
+              config = function()
+                  local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
+                  local cmp = require("cmp")
+                  require("cmp").setup({
+                      snippet = {
+                          expand = function(args)
+                              vim.fn["UltiSnips#Anon"](args.body)
+                          end,
+                      },
+                      sources = {
+                          { name = "ultisnips" },
+                          -- more sources
+                      },
+                      -- recommended configuration for <Tab> people:
+                      mapping = {
+                          ["<Tab>"] = cmp.mapping(
+                          function(fallback)
+                              cmp_ultisnips_mappings.expand_or_jump_forwards(fallback)
+                          end,
+                          { "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
+                          ),
+                          ["<S-Tab>"] = cmp.mapping(
+                          function(fallback)
+                              cmp_ultisnips_mappings.jump_backwards(fallback)
+                          end,
+                          { "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
+                          ),
+                      },
+                  })
+              end,
+          },
 		  {'hrsh7th/cmp-nvim-lsp', commit="44b16d11215dce86f253ce0c30949813c0a90765"},
 		  {'L3MON4D3/LuaSnip', commit="0df29db3543837f8b41597f2640397c5ec792b7b"},
 		  {'tpope/vim-fugitive', commit="cbe9dfa162c178946afa689dd3f42d4ea8bf89c1"},
