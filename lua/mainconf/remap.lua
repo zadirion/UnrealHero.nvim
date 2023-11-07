@@ -62,3 +62,7 @@ vim.keymap.set("i", "ww", "<C-w>")
 -- Unreal.nvim mappings
 vim.keymap.set("n", "<C-b>", "<cmd>UnrealBuild<CR>")
 vim.keymap.set("n", "<F5>", "<cmd>UnrealRun<CR>")
+
+-- splits a one liner {} block separated by ';' into separate lines
+vim.keymap.set("n", "]j", "f{i<CR><ESC>lli<CR><ESC>f;a<CR><ESC>f;a<CR><ESC>f;a<CR><ESC>f;a<CR><ESC>")
+

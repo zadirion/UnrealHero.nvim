@@ -125,6 +125,9 @@ return require('packer').startup(function(use)
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  use { "ggandor/leap.nvim" }
+
+  -- themes
   use { 'rose-pine/neovim' }
   use { "nonetallt/vim-neon-dark" }
   use { "folke/tokyonight.nvim" }
